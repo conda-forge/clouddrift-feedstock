@@ -146,6 +146,3 @@ Feedstock Maintainers
 * [@philippemiron](https://github.com/philippemiron/)
 * [@selipot](https://github.com/selipot/)
 
-
-<!-- dummy commit to enable rerendering -->
-
