@@ -1,5 +1,5 @@
 {% set name = "clouddrift" %}
-{% set version = "0.20.1" %}
+{% set version = "0.21.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/clouddrift-{{ version }}.tar.gz
-  sha256: db97b4b46577a310e35dd0552c8294efa908bca34166bcb458b3d20d258a74c0
+  sha256: 2c2504966360c60826da5ded6ebcffa9d633f66192403f10ba0d70d2a31a304c
 
 build:
   noarch: python
@@ -32,6 +32,7 @@ requirements:
     - awkward >=2.0.0
     - aiohttp >=3.8.4
     - requests >=2.31.0
+    - scipy >=1.11.2
     - zarr >=2.14.2
 
 test:
@@ -45,7 +46,7 @@ test:
 about:
   home: https://pypi.org/project/clouddrift/
   summary: Accelerating the use of Lagrangian data for atmospheric, oceanic, and climate sciences
-  license: Apache-2.0
+  license: MIT
   license_file: LICENSE
 
 extra:
