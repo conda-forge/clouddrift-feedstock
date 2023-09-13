@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/clouddrift-feed
 
 Home: https://pypi.org/project/clouddrift/
 
-Package license: Apache-2.0
+Package license: MIT
 
 Summary: Accelerating the use of Lagrangian data for atmospheric, oceanic, and climate sciences
 
