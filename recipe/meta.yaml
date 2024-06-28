@@ -1,5 +1,5 @@
 {% set name = "clouddrift" %}
-{% set version = "0.37.0" %}
+{% set version = "0.38.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/clouddrift-{{ version }}.tar.gz
-  sha256: 846b7e42a199011a937d5386527820a32614a84a20ebf73e5225eec30db17cee
+  sha256: 0443adb950e4cf07c2b7cdc7adb721e8261e89bea0f34fb3d2afa69cb9a18424
 
 build:
   noarch: python
