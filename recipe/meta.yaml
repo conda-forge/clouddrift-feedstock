@@ -6,21 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/clouddrift-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/clouddrift-{{ version }}.tar.gz
   sha256: 2f3e42df9bc1c478c0c66ae6359e9d23b03c09546fdefc8b9d4208fe9b7d9762
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - hatchling
     - pip
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - numpy >=1.21.6
     - xarray >=2023.5.0
     - pandas >=1.3.4
@@ -44,6 +44,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/clouddrift/
