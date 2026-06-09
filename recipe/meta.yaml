@@ -15,9 +15,6 @@ build:
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
-context:
-  python_min: "3.10"
-  
 requirements:
   host:
     - python {{ python_min }}
