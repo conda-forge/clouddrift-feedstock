@@ -1,5 +1,6 @@
 {% set name = "clouddrift" %}
 {% set version = "0.48.0" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -14,13 +15,16 @@ build:
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
+context:
+  python_min: "3.10"
+  
 requirements:
   host:
     - python {{ python_min }}
     - uv-build
     - pip
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - aiohttp >=3.13.5
     - awkward >=2.9.0
     - fsspec >=2026.3.0
@@ -42,7 +46,7 @@ test:
     - pip check
   requires:
     - pip
-    - python >=3.10
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/clouddrift/
